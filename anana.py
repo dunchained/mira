@@ -109,7 +109,7 @@ typer.secho('Generating column histograms.', fg=typer.colors.GREEN)
 for column in tqdm.auto.tqdm(demo_filtered_df.columns, desc='Generating histograms'):
     plt.hist(demo_filtered_df[column], bins=160, edgecolor='black')
     plt.xlabel('Normalized X axis postions')
-    plt.ylabel('Number od SNPs')
+    plt.ylabel('Number of SNPs')
     plt.title(f'Histogram for {column}')
     output_file_path = os.path.join(args.output_folder, f'{column}_histogram.png')
     plt.savefig(output_file_path, bbox_inches='tight')
